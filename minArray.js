@@ -8,4 +8,4 @@ function findMin( n ) {
 	
 } 
 //example
-console.log(findMin([1,3,-5,6,8,9])); //-5
+console.log(findMin([1,3,-5,6,8,9])); // -5
