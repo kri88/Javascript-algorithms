@@ -1,0 +1,10 @@
+const countS = (str, searchV) => {
+  let count = 0,
+    i = 0;
+  while (true) {
+    const r = str.indexOf(searchV, i);
+    if (r !== -1) [count, i] = [count + 1, r + 1];
+    else return count;
+  }
+};
+countS('dog dog cat cat dog cat', 'cat'); // 3
