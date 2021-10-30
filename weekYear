@@ -1,0 +1,6 @@
+const wOfYear = date => {
+  const startYear = new Date(date.getFullYear(), 0, 1);
+  startYear.setDate(startYear.getDate() + (startYear.getDay() % 7));
+  return Math.round((date - startYear) / (7 * 24 * 3600 * 1000));
+};
+wOfYear(new Date('2020-01-12')); // 2
