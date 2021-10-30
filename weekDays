@@ -1,0 +1,10 @@
+const countD = (sDate, eDate) =>
+  Array
+    .from({ length: (eDate - sDate) / (1000 * 3600 * 24) })
+    .reduce(count => {
+      if (sDate.getDay() % 6 !== 0) count++;
+      sDate = new Date(sDate.setDate(sDate.getDate() + 1));
+      return count;
+    }, 0);
+
+countD(new Date('Oct 05, 2019'), new Date('Oct 14, 2019')); // 7
