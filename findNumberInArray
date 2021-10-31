@@ -1,0 +1,23 @@
+
+//find nummber in ordered array
+
+function bSearch(arr, n) {
+  let mi = 0,
+      ma = arr.length - 1,
+      g;
+
+  while (mi <= ma) {
+    g = Math.floor((mi + ma) / 2);
+
+    if (arr[g] === n) {
+      return true;
+    } else {
+      if (arr[g] < n) {
+        mi = g + 1;
+      } else {
+        ma = g - 1;
+      }
+    }
+  }
+  return false;
+}
