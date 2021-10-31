@@ -1,0 +1,12 @@
+//Convert array to a String. Witout use built-in method.
+
+function arToS(ar) {
+  let s = '';
+  ar.forEach(function(i, index) {
+    s += i;
+    if (index != (ar.length - 1)) {
+      s += ',';
+    };
+  });
+  return s;
+}
